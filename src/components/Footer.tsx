@@ -13,7 +13,7 @@ export default function Footer() {
           <div className={styles.logoRow}>
             <Image src="/logo.png" alt="Emerald Event Planning" width={170} height={187} />
           </div>
-          <p className={styles.desc}>Boutique event planning for elegant, personal celebrations across London, Surrey, West Sussex and Hampshire.</p>
+          <p className={styles.desc}>Boutique event planning for elegant, personal celebrations across London and within 20 miles.</p>
         </div>
 
         <div className={styles.col}>

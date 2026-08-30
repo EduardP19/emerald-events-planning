@@ -3,8 +3,8 @@ import styles from './page.module.css';
 import { ENQUIRY_FORM_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Event Planner in London, Surrey & Hampshire',
-  description: 'Get in touch with Emerald Event Planning to book your event, request a quote, or simply have a chat about your ideas. Serving London, Surrey, West Sussex and Hampshire.',
+  title: 'Contact Us — Event Planner in London and Within 20 Miles',
+  description: 'Get in touch with Emerald Event Planning to book your event, request a quote, or simply have a chat about your ideas. Serving London and areas within 20 miles.',
   alternates: { canonical: '/contact' },
 };
 
@@ -94,8 +94,8 @@ export default function ContactPage() {
 
               <div className={styles.infoCard}>
                 <h3 className={styles.infoTitle}>Areas We Cover</h3>
-                <p className={styles.areasText}>London · Surrey · West Sussex · Hampshire</p>
-                <p className={styles.areasSubtext}>Including Haslemere, Liphook, Witley and surrounding areas.</p>
+                <p className={styles.areasText}>London and within 20 miles</p>
+                <p className={styles.areasSubtext}>Including Essex, Hertfordshire and Kent border towns.</p>
               </div>
             </div>
           </div>

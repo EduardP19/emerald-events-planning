@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: 'Emerald Event Planning — Making Occasions Unforgettable', template: '%s | Emerald Event Planning' },
   description: 'Emerald Event Planning is a boutique event planning service based in London. We specialise in milestone celebrations, anniversaries, baby showers, birthdays, wakes & repasts, and more.',
-  keywords: ['event planning', 'event planner London', 'party planning', 'milestone events', 'wedding planning', 'baby shower', 'anniversary', 'Surrey', 'Hampshire'],
+  keywords: ['event planning', 'event planner London', 'party planning', 'milestone events', 'wedding planning', 'baby shower', 'anniversary', 'Essex', 'Hertfordshire', 'Kent'],
   alternates: {
     canonical: '/',
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Emerald Event Planning — Making Occasions Unforgettable',
-    description: 'Boutique event planning for milestone celebrations, anniversaries, baby showers, birthdays and more across London, Surrey, West Sussex and Hampshire.',
+    description: 'Boutique event planning for milestone celebrations, anniversaries, baby showers, birthdays and more across London and within 20 miles.',
   },
 };
 

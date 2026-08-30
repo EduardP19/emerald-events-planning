@@ -4,8 +4,8 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'About Us — Event Planner in London, Surrey & Hampshire',
-  description: 'Meet Angelle Cassell, founder of Emerald Event Planning — a boutique event planner serving London, Surrey, West Sussex and Hampshire. Learn our story, mission and values.',
+  title: 'About Us — Event Planner in London and Within 20 Miles',
+  description: 'Meet Angelle Cassell, founder of Emerald Event Planning — a boutique event planner serving London and areas within 20 miles. Learn our story, mission and values.',
   alternates: { canonical: '/about' },
 };
 
@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className="container">
           <div className={styles.founderGrid}>
             <div className={styles.founderPanel}>
-              <Image src="/logo.png" alt="Emerald Event Planning" width={240} height={264} />
+              <Image src="/logo_nobg.png" alt="Emerald Event Planning" width={240} height={264} />
             </div>
             <div className={styles.founderText}>
               <span className="section-label">Meet the Founder</span>
@@ -103,9 +103,9 @@ export default function AboutPage() {
             <div>
               <span className="section-label">Where We Work</span>
               <h2>Areas We Cover</h2>
-              <p>Emerald Event Planning proudly serves clients across:</p>
+              <p>Based in Walthamstow (E17), Emerald Event Planning proudly serves clients across London and within 20 miles, including:</p>
               <ul className={styles.areaList}>
-                {['London (East, South, North & Central)', 'Surrey', 'West Sussex', 'Hampshire', 'Haslemere & Liphook area', 'Witley & surrounding villages'].map(a => (
+                {['All of London (East, South, North & Central)', 'Essex — Romford, Ilford & Brentwood', 'Hertfordshire — Watford & St Albans', 'Kent — Dartford & Bromley'].map(a => (
                   <li key={a}>
                     <span className={styles.areaCheck}>📍</span> {a}
                   </li>

@@ -51,7 +51,7 @@ export default function TwitterImage() {
             fontFamily: 'Georgia, serif',
           }}
         >
-          London · Surrey · West Sussex · Hampshire
+          London and within 20 miles
         </div>
       </div>
     ),

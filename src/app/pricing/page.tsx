@@ -55,14 +55,14 @@ const packages = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Event Planner Pricing — London, Surrey & Hampshire',
-  description: 'Transparent event planner pricing across London, Surrey, West Sussex and Hampshire. From £150 for essential planning support to fully bespoke quotes for larger events.',
+  title: 'Event Planner Pricing — London and Within 20 Miles',
+  description: 'Transparent event planner pricing across London and within 20 miles. From £150 for essential planning support to fully bespoke quotes for larger events.',
   alternates: { canonical: '/pricing' },
 };
 
 const faqs = [
   { q: 'Do I need to pay a deposit?', a: 'Yes. A non-refundable booking deposit is required to confirm your date. The amount varies by package and is confirmed in your written quote.' },
-  { q: 'What areas do you cover?', a: 'We serve London, Surrey, West Sussex and Hampshire. Events outside these areas can be discussed — additional travel expenses may apply.' },
+  { q: 'What areas do you cover?', a: 'We serve London and areas within 20 miles, including parts of Essex, Hertfordshire and Kent. Events outside these areas can be discussed — additional travel expenses may apply.' },
   { q: 'What is included in "expenses"?', a: 'Expenses are out-of-pocket costs incurred on your behalf — for example, travel to venues, printing costs, or sourcing specific materials. All expenses are pre-agreed with you before any spend.' },
   { q: 'Can I add On-the-Day coordination?', a: 'Yes. On-the-Day can be added after your main package is selected. It is £70 per hour with a 2-hour minimum, and drops to £40 per hour with Emerald Bespoke packages.' },
   { q: 'What if I need to cancel?', a: 'Cancellation terms are set out in your booking agreement. Generally, if you cancel with 30+ days notice, any payments beyond the deposit may be refunded. See our Terms & Conditions for full details.' },

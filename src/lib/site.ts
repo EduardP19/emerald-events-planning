@@ -17,7 +17,9 @@ export const BUSINESS = {
   latitude: 51.5895,
   longitude: -0.0155,
   serviceRadiusMiles: 20,
-  areasServed: ['London', 'Surrey', 'West Sussex', 'Hampshire'],
+  // Real places within ~20 miles of E17 — London plus the near edges of Essex, Herts & Kent.
+  areasServed: ['London', 'Essex', 'Hertfordshire', 'Kent'],
+  areasServedShort: 'London and within 20 miles',
   priceRange: '££',
 };
 

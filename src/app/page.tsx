@@ -6,7 +6,7 @@ import heroImage from '../../assets/images/hero.jpg';
 
 export const metadata: Metadata = {
   title: 'Emerald Event Planning — Making Occasions Unforgettable',
-  description: 'Boutique event planning for milestone celebrations, anniversaries, baby showers, birthdays, wakes & repasts across London, Surrey, West Sussex and Hampshire.',
+  description: 'Boutique event planning for milestone celebrations, anniversaries, baby showers, birthdays, wakes & repasts across London and within 20 miles.',
   alternates: { canonical: '/' },
 };
 

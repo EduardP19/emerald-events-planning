@@ -3,8 +3,8 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Event Planning Services in London, Surrey & Hampshire',
-  description: 'Event planning, supplier coordination, venue sourcing, styling, budgeting and on-the-day support from Emerald Event Planning, serving London, Surrey, West Sussex and Hampshire.',
+  title: 'Event Planning Services in London and Within 20 Miles',
+  description: 'Event planning, supplier coordination, venue sourcing, styling, budgeting and on-the-day support from Emerald Event Planning, serving London and areas within 20 miles.',
   alternates: { canonical: '/services' },
 };
 
@@ -133,8 +133,10 @@ export default function ServicesPage() {
           <div className={styles.serviceGrid}>
             {services.map(({ icon, title, description }) => (
               <article key={title} className={styles.serviceCard}>
-                <span className={styles.serviceIcon}>{icon}</span>
-                <h3>{title}</h3>
+                <div className={styles.serviceCardHead}>
+                  <span className={styles.serviceIcon}>{icon}</span>
+                  <h3>{title}</h3>
+                </div>
                 <p>{description}</p>
               </article>
             ))}
