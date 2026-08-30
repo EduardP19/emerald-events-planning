@@ -162,7 +162,7 @@
 .pkgName  { font-size: 1.25rem; font-family: var(--font-heading); text-transform: uppercase; }
 .pkgPrice { font-size: 1.5rem; font-family: var(--font-heading); font-weight: 700; color: var(--emerald); }
 .pkgDesc  { font-size: 0.95rem; line-height: 1.6; flex: 1; }
-.packageCard .btn { border-radius: 100px; justify-content: center; }
+.packageCard :global(.btn) { width: 100%; border-radius: 100px; }
 
 .homeAddon {
   display: grid;
@@ -295,7 +295,7 @@
       linear-gradient(90deg, rgba(250,248,243,0.95) 0%, rgba(250,248,243,0.68) 60%, rgba(250,248,243,0.25) 100%);
   }
   .heroContent { text-align: center; margin: 0 auto; }
-  .heroTitle { font-size: 5rem; }
+  .heroTitle { font-size: clamp(3.35rem, 11vw, 5rem); }
   .heroLabel::after { margin-left: auto; margin-right: auto; }
   .heroCta { align-self: center; }
   .aboutGrid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -317,7 +317,7 @@
     padding-bottom: 3rem;
   }
   .heroTitle {
-    font-size: 3.7rem;
+    font-size: clamp(2.85rem, 13vw, 3.35rem);
   }
   .heroSub {
     font-size: 1rem;
@@ -334,4 +334,10 @@
   .galleryGrid { grid-template-columns: 1fr 1fr; }
   .galleryItem { height: 180px; }
   .ctaTitle { font-size: 2.15rem; }
+}
+
+@media (max-width: 380px) {
+  .heroTitle { font-size: 2.75rem; }
+  .sectionHeading { font-size: 1.8rem; }
+  .homeAddon { padding-left: 1.2rem; padding-right: 1.2rem; }
 }

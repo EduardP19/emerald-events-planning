@@ -26,6 +26,7 @@
 .packageIncludes { display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 1.75rem; flex: 1; }
 .packageIncludes li, .addonIncludes li { font-size: 0.9rem; color: var(--charcoal); padding-left: 1.15rem; position: relative; line-height: 1.45; }
 .packageIncludes li::before, .addonIncludes li::before { content: '✓'; position: absolute; left: 0; color: var(--emerald); font-weight: 700; }
+.packageCard :global(.btn), .onDayAddon :global(.btn) { width: 100%; }
 
 .onDayAddon { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.35fr) minmax(150px, 0.5fr) auto; align-items: center; gap: 1.5rem; margin-top: 1.5rem; padding: 1.5rem; border-radius: 14px; background: linear-gradient(135deg, var(--emerald-dark), #123f36 58%, #1d5d4f); color: var(--white); box-shadow: 0 22px 56px rgba(15, 48, 42, 0.18); }
 .onDayAddon .packageTop h3, .onDayAddon .packageTop p { color: var(--white); }
@@ -69,4 +70,10 @@
   .onDayAddon { padding: 1.25rem; }
   .addonIncludes { grid-template-columns: 1fr; }
   .addonsGrid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 380px) {
+  .packageTop { flex-direction: column; align-items: center; text-align: center; }
+  .addonIntro { align-items: center; text-align: center; }
+  .expenseNote { flex-direction: column; }
 }

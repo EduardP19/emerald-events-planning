@@ -124,7 +124,7 @@ export default function HomePage() {
                 <h3 className={styles.pkgName}>{name}</h3>
                 <div className={styles.pkgPrice}>{price}</div>
                 <p className={styles.pkgDesc}>{desc}</p>
-                <Link href="/services" className={featured ? 'btn btn-gold' : 'btn btn-outline'}>Find Out More</Link>
+                <Link href="/services" className={featured ? 'btn btn-gold' : 'btn btn-primary'}>Find Out More</Link>
               </div>
             ))}
           </div>
