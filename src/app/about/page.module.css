@@ -1,0 +1,80 @@
+.founderGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.founderPanel {
+  min-height: 420px;
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(15,61,27,0.92), rgba(26,92,42,0.86)),
+    var(--emerald-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+.founderPanel p {
+  color: var(--gold-light);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-style: italic;
+}
+.founderPanel img {
+  width: min(260px, 82%);
+  height: auto;
+}
+.founderText h2 { margin-bottom: 1.25rem; }
+.founderText p  { margin-bottom: 1rem; }
+.founderSignature { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--cream-dark); }
+.founderSignature span { font-family: var(--font-heading); font-size: 1rem; color: var(--emerald-dark); line-height: 1.4; }
+.founderSignature em { color: var(--grey); font-size: 0.9rem; }
+
+.missionSection { background: linear-gradient(135deg, var(--emerald-dark), var(--emerald)); padding: 5rem 0; }
+.missionSection .section-label { color: var(--gold-light) !important; }
+.missionTitle   { color: var(--white) !important; margin-bottom: 0.5rem; }
+.missionQuote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: rgba(255,255,255,0.9);
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.55;
+  border: none;
+  padding: 0;
+}
+
+.valuesGrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; }
+.valueCard  { background: var(--cream); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; }
+.valueIcon  { font-size: 2rem; display: block; margin-bottom: 1rem; }
+.valueTitle { margin-bottom: 0.75rem; font-size: 1.2rem; }
+.valueCard p { font-size: 0.9rem; }
+
+.areaGrid   { display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: start; }
+.areaGrid h2 { margin-bottom: 1rem; }
+.areaGrid > div > p { margin-bottom: 1rem; }
+.areaList   { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; }
+.areaList li { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; color: var(--charcoal); }
+.areaCheck  { flex-shrink: 0; }
+
+.addressCard { background: var(--white); border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-md); }
+.addressCard h4 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--emerald-dark); margin-bottom: 1.5rem; }
+.addressItem { display: flex; gap: 1rem; margin-bottom: 1.25rem; }
+.addressItem span { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+.addressItem div { display: flex; flex-direction: column; gap: 0.2rem; }
+.addressItem strong { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--charcoal); }
+.addressItem p { font-size: 0.9rem; }
+.addressItem a { font-size: 0.9rem; color: var(--emerald); transition: color 0.2s; word-break: break-word; }
+.addressItem a:hover { color: var(--gold); }
+
+@media (max-width: 900px) {
+  .founderGrid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .founderPanel { min-height: 300px; }
+  .valuesGrid { grid-template-columns: repeat(2,1fr); }
+  .areaGrid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 600px) {
+  .valuesGrid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,212 @@
+.sectionIntro {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.sectionIntro h2 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.serviceCard,
+.eventType {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--cream-dark);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(201,168,76,0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,0.7), transparent 52%);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  pointer-events: none;
+}
+
+.serviceCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.serviceCard:hover,
+.eventType:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201,168,76,0.62);
+  box-shadow: 0 18px 44px rgba(15,61,27,0.14);
+}
+
+.serviceCard:hover::before,
+.serviceCard:hover::after {
+  opacity: 1;
+}
+
+.serviceCard {
+  min-height: 245px;
+  padding: 1.65rem 1.25rem;
+  background: linear-gradient(180deg, var(--white), #fffdf8);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  text-align: center;
+}
+
+.serviceIcon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201,168,76,0.36);
+  background:
+    radial-gradient(circle at 35% 25%, var(--white), var(--cream) 68%);
+  color: var(--emerald);
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 8px rgba(255,255,255,0.52);
+  transition: transform 0.28s ease, background 0.28s ease, color 0.28s ease;
+}
+
+.serviceCard:hover .serviceIcon {
+  transform: scale(1.05);
+  background: var(--emerald-dark);
+  color: var(--gold-light);
+}
+
+.serviceCard h3 {
+  margin: 0;
+  color: var(--emerald-dark);
+  font-size: 1.05rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.serviceCard p {
+  color: var(--charcoal);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.servicesSection {
+  background: var(--cream);
+}
+
+.eventTypeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.eventType {
+  min-height: 290px;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(180deg, var(--white), #fffdf8);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--emerald-dark);
+  text-align: center;
+}
+
+.eventTypeIcon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  color: var(--emerald);
+  font-size: 2rem;
+  box-shadow: inset 0 0 0 1px rgba(201,168,76,0.28);
+}
+
+.eventType h3 {
+  margin: 0;
+  color: inherit;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.eventType p {
+  color: var(--charcoal);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.eventType:hover {
+  background: var(--emerald-dark);
+  color: var(--white);
+}
+
+.eventType:hover p {
+  color: rgba(255,255,255,0.78);
+}
+
+.eventType:hover .eventTypeIcon {
+  background: rgba(255,255,255,0.1);
+  color: var(--gold-light);
+}
+
+.serviceCta {
+  background:
+    linear-gradient(135deg, #04160c 0%, #0f3d1b 100%);
+  padding: 5rem 0;
+}
+
+.serviceCta h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.serviceCta p {
+  color: rgba(255,255,255,0.75);
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+@media (max-width: 1100px) {
+  .serviceGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .eventTypeGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .serviceGrid,
+  .eventTypeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard {
+    min-height: auto;
+  }
+
+  .eventType { min-height: auto; }
+}

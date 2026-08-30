@@ -1,0 +1,17 @@
+.next/
+node_modules/
+out/
+
+.env
+.env*
+!.env.example
+
+.DS_Store
+*.log
+
+dist/
+coverage/
+
+assets/_source_docs/
+assets/images/*
+!assets/images/hero.jpg

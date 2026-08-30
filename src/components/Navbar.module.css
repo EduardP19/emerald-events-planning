@@ -1,0 +1,125 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.transparent { background: transparent; }
+.solid       { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+.scrolled    { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  height: 100%;
+}
+.logo img {
+  width: 168px;
+  height: auto;
+  max-height: 96px;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navLink {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  border-radius: 4px;
+  transition: color 0.2s;
+  position: relative;
+}
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; left: 0.9rem; right: 0.9rem;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+.navLink:hover::after,
+.active::after { transform: scaleX(1); }
+.navLink:hover { color: var(--emerald); }
+.active { color: var(--emerald); font-weight: 600; }
+
+/* In the new mockup, the navbar links are dark even when transparent because background is cream */
+.transparent .navLink { color: var(--charcoal); }
+.transparent .navLink:hover { color: var(--emerald); }
+.transparent .active { color: var(--emerald); }
+
+.ctaBtn { margin-left: 1rem; border-radius: 100px; padding: 0.85rem 2.5rem; }
+
+/* ── Burger ──────────────────────────────── */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--emerald-dark);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.burgerOpen span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burgerOpen span:nth-child(2) { opacity: 0; }
+.burgerOpen span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile ──────────────────────────────── */
+@media (max-width: 900px) {
+  .burger { display: flex; }
+  .ctaBtn { display: none; }
+
+  .nav {
+    position: fixed;
+    top: var(--nav-height); left: 0; right: 0;
+    background: var(--white);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.5rem 2rem;
+    gap: 0;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.3s ease;
+  }
+  .open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  .navLink { padding: 0.85rem 0; color: var(--charcoal) !important; border-bottom: 1px solid var(--cream-dark); font-size: 1rem; }
+  .navLink::after { display: none; }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 126px;
+    max-height: 78px;
+  }
+}
