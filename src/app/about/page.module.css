@@ -3,9 +3,7 @@
   min-height: 420px;
   border: 1px solid rgba(201,168,76,0.35);
   border-radius: 16px;
-  background:
-    linear-gradient(135deg, rgba(15,61,27,0.92), rgba(26,92,42,0.86)),
-    var(--emerald-dark);
+  background: var(--emerald-light);
   display: flex;
   flex-direction: column;
   align-items: center;
