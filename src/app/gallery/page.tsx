@@ -3,8 +3,9 @@ import Link from 'next/link';
 import GalleryClient from './GalleryClient';
 
 export const metadata: Metadata = {
-  title: 'Gallery',
-  description: 'Browse a selection of events planned and coordinated by Emerald Event Planning — from elegant anniversary celebrations to creative birthday parties.',
+  title: 'Event Gallery — Real Celebrations Across London & Surrey',
+  description: 'Browse a selection of events planned and coordinated by Emerald Event Planning across London, Surrey, West Sussex and Hampshire — from elegant anniversary celebrations to creative birthday parties.',
+  alternates: { canonical: '/gallery' },
 };
 
 const photos = [
@@ -31,6 +32,12 @@ export default function GalleryPage() {
 
       <section className="section">
         <div className="container">
+          <p style={{ maxWidth: 720, margin: '0 auto 2.5rem', textAlign: 'center' }}>
+            From anniversary teas in Surrey to milestone birthdays across London, every event below was
+            planned and styled by Emerald Event Planning for clients in London, Surrey, West Sussex and
+            Hampshire. Explore venue styling, balloon displays, table settings and personal touches from
+            real celebrations we&apos;ve brought to life.
+          </p>
           <GalleryClient photos={photos} />
         </div>
       </section>

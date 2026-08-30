@@ -4,8 +4,9 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Meet Angelle Cassell, founder of Emerald Event Planning. Learn about our story, mission, and values.',
+  title: 'About Us — Event Planner in London, Surrey & Hampshire',
+  description: 'Meet Angelle Cassell, founder of Emerald Event Planning — a boutique event planner serving London, Surrey, West Sussex and Hampshire. Learn our story, mission and values.',
+  alternates: { canonical: '/about' },
 };
 
 const values = [

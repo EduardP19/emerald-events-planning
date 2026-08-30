@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Emerald Event Planning Privacy Policy — how we collect, use and protect your personal data in accordance with UK GDPR.',
+  alternates: { canonical: '/privacy' },
 };
 
 export default function PrivacyPage() {

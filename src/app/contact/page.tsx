@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
+import { ENQUIRY_FORM_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Get in touch with Emerald Event Planning to book your event, request a quote, or simply have a chat about your ideas.',
+  title: 'Contact Us — Event Planner in London, Surrey & Hampshire',
+  description: 'Get in touch with Emerald Event Planning to book your event, request a quote, or simply have a chat about your ideas. Serving London, Surrey, West Sussex and Hampshire.',
+  alternates: { canonical: '/contact' },
 };
 
 export default function ContactPage() {
@@ -28,8 +30,7 @@ export default function ContactPage() {
               <div className={styles.externalFormBox}>
                 <h3>Ready to tell us about your event?</h3>
                 <p>Please click the button below to fill out our detailed enquiry form. This helps us gather all the essential details about your occasion so we can provide you with the best possible service and a tailored quote.</p>
-                {/* User will update this link with their external form URL */}
-                <a href="#" target="_blank" rel="noopener noreferrer" className={`btn btn-primary ${styles.submitBtn}`}>
+                <a href={ENQUIRY_FORM_URL} target="_blank" rel="noopener noreferrer" className={`btn btn-primary ${styles.submitBtn}`}>
                   Open Enquiry Form ✦
                 </a>
               </div>

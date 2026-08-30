@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
   description: 'Terms and Conditions for Emerald Event Planning services including booking, cancellation, payments and liability.',
+  alternates: { canonical: '/terms' },
 };
 
 export default function TermsPage() {

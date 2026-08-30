@@ -3,8 +3,9 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Our Services',
-  description: 'Event planning, supplier coordination, venue sourcing, styling, budgeting and on-the-day support from Emerald Event Planning.',
+  title: 'Event Planning Services in London, Surrey & Hampshire',
+  description: 'Event planning, supplier coordination, venue sourcing, styling, budgeting and on-the-day support from Emerald Event Planning, serving London, Surrey, West Sussex and Hampshire.',
+  alternates: { canonical: '/services' },
 };
 
 const services = [
