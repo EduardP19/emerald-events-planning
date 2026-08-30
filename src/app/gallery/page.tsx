@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import styles from './page.module.css';
+import GalleryClient from './GalleryClient';
 
 export const metadata: Metadata = {
   title: 'Gallery',
@@ -32,23 +31,7 @@ export default function GalleryPage() {
 
       <section className="section">
         <div className="container">
-          <div className={styles.galleryGrid}>
-            {photos.map(({ src, alt, category }) => (
-              <div key={src} className={styles.galleryItem}>
-                <Image
-                  src={src}
-                  alt={alt}
-                  fill
-                  className={styles.galleryImg}
-                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                />
-                <div className={styles.galleryOverlay}>
-                  <span className={styles.galleryCategory}>{category}</span>
-                  <p className={styles.galleryAlt}>{alt}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryClient photos={photos} />
         </div>
       </section>
 
