@@ -6,7 +6,6 @@
 
 .sectionIntro h2 {
   margin: 0;
-  text-transform: uppercase;
 }
 
 .serviceGrid {
@@ -214,4 +213,77 @@
   }
 
   .eventType { min-height: auto; }
+}
+
+/* ═══ PRICING (merged from /pricing) ═════════════════════════ */
+.sizeGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.sizeCard { background: var(--white); border-radius: 12px; padding: 2rem; text-align: center; box-shadow: var(--shadow-sm); }
+.sizeNumber { font-size: 2rem; margin-bottom: 0.75rem; }
+.sizeCard h3 { margin-bottom: 0.4rem; }
+.sizeRange { font-family: var(--font-heading); font-size: 1.15rem; color: var(--gold); font-weight: 700; margin-bottom: 0.75rem; }
+.sizeCard p { font-size: 0.9rem; }
+
+.packageGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; align-items: stretch; }
+.packageCard { position: relative; display: flex; flex-direction: column; min-height: 100%; background: linear-gradient(180deg, var(--white) 0%, #fffdf6 100%); border: 1px solid rgba(180, 145, 65, 0.22); border-radius: 14px; padding: 2rem; box-shadow: 0 18px 45px rgba(15, 48, 42, 0.08); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; overflow: hidden; }
+.packageCard::before { content: ''; position: absolute; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg, var(--emerald), var(--gold)); opacity: 0; transition: opacity 0.25s ease; }
+.packageCard:hover { transform: translateY(-6px); border-color: rgba(180, 145, 65, 0.48); box-shadow: 0 24px 60px rgba(15, 48, 42, 0.14); }
+.packageCard:hover::before, .featuredCard::before { opacity: 1; }
+.featuredCard { background: linear-gradient(180deg, #fffaf0 0%, var(--white) 100%); border-color: rgba(180, 145, 65, 0.5); box-shadow: 0 24px 64px rgba(180, 145, 65, 0.15); }
+
+.packageTop { display: flex; align-items: flex-start; gap: 0.9rem; }
+.packageTop h3 { margin-bottom: 0.2rem; font-size: 1.18rem; }
+.packageTop p { font-size: 0.86rem; color: var(--grey); line-height: 1.5; }
+.packageIcon { display: grid; place-items: center; width: 3rem; height: 3rem; flex-shrink: 0; border-radius: 999px; background: var(--emerald-light); font-size: 1.45rem; box-shadow: inset 0 0 0 1px rgba(15, 90, 76, 0.08); }
+.badgeSlot { min-height: 1.55rem; margin-bottom: 0.7rem; }
+.popularBadge { display: inline-flex; background: var(--gold); color: var(--white); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 100px; }
+
+.packagePrice { margin: 1.75rem 0 1.35rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--cream-dark); }
+.packagePrice span { display: block; font-family: var(--font-heading); font-size: clamp(1.7rem, 2.5vw, 2.15rem); font-weight: 700; color: var(--emerald); line-height: 1.15; }
+.packagePrice small { display: block; color: var(--grey); font-size: 0.8rem; margin-top: 0.35rem; }
+
+.packageIncludes { display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 1.75rem; flex: 1; }
+.packageIncludes li, .addonIncludes li { font-size: 0.9rem; color: var(--charcoal); padding-left: 1.15rem; position: relative; line-height: 1.45; }
+.packageIncludes li::before, .addonIncludes li::before { content: '✓'; position: absolute; left: 0; color: var(--emerald); font-weight: 700; }
+.packageCard :global(.btn), .onDayAddon :global(.btn) { width: 100%; }
+
+.onDayAddon { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.35fr) minmax(150px, 0.5fr) auto; align-items: center; gap: 1.5rem; margin-top: 1.5rem; padding: 1.5rem; border-radius: 14px; background: linear-gradient(135deg, var(--emerald-dark), #123f36 58%, #1d5d4f); color: var(--white); box-shadow: 0 22px 56px rgba(15, 48, 42, 0.18); }
+.onDayAddon .packageTop h3, .onDayAddon .packageTop p { color: var(--white); }
+.onDayAddon .packageTop p { color: rgba(255, 255, 255, 0.76); }
+.onDayAddon .packageIcon { background: rgba(255, 255, 255, 0.12); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15); }
+.addonIntro { display: flex; flex-direction: column; gap: 0.85rem; }
+.addonBadge { align-self: flex-start; background: rgba(180, 145, 65, 0.95); color: var(--white); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 100px; }
+.addonIncludes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 1rem; }
+.addonIncludes li { color: rgba(255, 255, 255, 0.88); }
+.addonIncludes li::before { color: var(--gold); }
+.addonRate span { display: block; font-family: var(--font-heading); font-size: 1.65rem; font-weight: 700; line-height: 1.1; color: var(--gold); }
+.addonRate small { display: block; color: rgba(255, 255, 255, 0.72); font-size: 0.78rem; line-height: 1.45; margin-top: 0.35rem; max-width: 210px; }
+
+.expenseNote { display: flex; gap: 1rem; align-items: flex-start; background: var(--emerald-light); border-left: 4px solid var(--emerald); padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin-top: 2rem; }
+.expenseNote span { font-size: 1.25rem; flex-shrink: 0; }
+.expenseNote p { font-size: 0.9rem; color: var(--charcoal); }
+.expenseNote strong { color: var(--emerald); }
+
+.faqGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.faqCard { background: var(--cream); border-radius: 12px; padding: 1.75rem; }
+.faqQ { font-size: 1rem; font-family: var(--font-heading); color: var(--emerald-dark); margin-bottom: 0.75rem; }
+.faqA { font-size: 0.9rem; }
+
+@media (max-width: 900px) {
+  .packageGrid { grid-template-columns: 1fr; }
+  .onDayAddon { grid-template-columns: 1fr; align-items: flex-start; }
+  .addonIncludes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .addonRate small { max-width: none; }
+  .sizeGrid { grid-template-columns: 1fr; }
+  .faqGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .packageCard { padding: 1.5rem; }
+  .onDayAddon { padding: 1.25rem; }
+  .addonIncludes { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 380px) {
+  .packageTop { flex-direction: column; align-items: center; text-align: center; }
+  .addonIntro { align-items: center; text-align: center; }
+  .expenseNote { flex-direction: column; }
 }
