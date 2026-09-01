@@ -1,11 +1,26 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
-import { ENQUIRY_FORM_URL } from '@/lib/site';
+import { ENQUIRY_FORM_URL, SITE_URL } from '@/lib/site';
+
+const title = 'Contact Us — Get a Quote From Your London Event Planner';
+const description = 'Get in touch with Emerald Event Planning to book your event, request a quote, or simply have a chat about your ideas. Serving London and areas within 20 miles.';
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Event Planner in London and Within 20 Miles',
-  description: 'Get in touch with Emerald Event Planning to book your event, request a quote, or simply have a chat about your ideas. Serving London and areas within 20 miles.',
+  title,
+  description,
+  keywords: ['contact event planner London', 'event planning quote', 'book event planner', 'party planner enquiry'],
   alternates: { canonical: '/contact' },
+  openGraph: { title, description, url: '/contact' },
+  twitter: { title, description },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE_URL}/contact` },
+  ],
 };
 
 export default function ContactPage() {
@@ -101,6 +116,11 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
     </>
   );
 }

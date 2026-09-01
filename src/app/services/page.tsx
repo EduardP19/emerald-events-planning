@@ -1,11 +1,18 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
+import { SITE_URL } from '@/lib/site';
+
+const title = 'Event Planning Services — London and Within 20 Miles';
+const description = 'Full event planning services from Emerald Event Planning: venue sourcing, supplier coordination, styling, budget management and on-the-day coordination. Serving London and areas within 20 miles.';
 
 export const metadata: Metadata = {
-  title: 'Services & Pricing — Event Planning in London and Within 20 Miles',
-  description: 'Event planning services and transparent pricing from Emerald Event Planning. Supplier coordination, venue sourcing, styling and packages from £150, serving London and areas within 20 miles.',
+  title,
+  description,
+  keywords: ['event planning services London', 'venue sourcing', 'supplier coordination', 'event styling', 'on-the-day coordination', 'party planner London'],
   alternates: { canonical: '/services' },
+  openGraph: { title, description, url: '/services' },
+  twitter: { title, description },
 };
 
 const services = [
@@ -146,6 +153,8 @@ const packages = [
   },
 ];
 
+// Rendered below for context, but the FAQPage structured data for this content lives on
+// /pricing (the canonical source for pricing FAQs) to avoid emitting duplicate FAQPage JSON-LD.
 const pricingFaqs = [
   { q: 'Do I need to pay a deposit?', a: 'Yes. A non-refundable booking deposit is required to confirm your date. The amount varies by package and is confirmed in your written quote.' },
   { q: 'What areas do you cover?', a: 'We serve London and areas within 20 miles, including parts of Essex, Hertfordshire and Kent. Events outside these areas can be discussed — additional travel expenses may apply.' },
@@ -155,17 +164,34 @@ const pricingFaqs = [
   { q: 'Do you work with a specific set of suppliers?', a: 'We work with a vetted network of trusted local suppliers, but we are happy to work with your preferred vendors too. Supplier selection is always discussed and agreed with you.' },
 ];
 
-const pricingFaqJsonLd = {
+const servicesJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: pricingFaqs.map(({ q, a }) => ({
-    '@type': 'Question',
-    name: q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: a,
-    },
-  })),
+  '@type': 'Service',
+  serviceType: 'Event Planning',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Emerald Event Planning',
+  },
+  areaServed: ['London', 'Essex', 'Hertfordshire', 'Kent'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Event Planning Packages',
+    itemListElement: packages.map((pkg) => ({
+      '@type': 'Offer',
+      name: pkg.name,
+      description: pkg.subtitle,
+      url: `${SITE_URL}/services`,
+    })),
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Services & Pricing', item: `${SITE_URL}/services` },
+  ],
 };
 
 export default function ServicesPage() {
@@ -343,7 +369,11 @@ export default function ServicesPage() {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <section className={styles.serviceCta}>

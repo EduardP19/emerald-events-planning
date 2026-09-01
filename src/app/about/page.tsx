@@ -2,11 +2,27 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
+import { SITE_URL } from '@/lib/site';
+
+const title = 'About Us — Meet Your London Event Planner';
+const description = 'Meet Angelle Cassell, founder of Emerald Event Planning — a boutique event planner serving London and areas within 20 miles. Learn our story, mission and values.';
 
 export const metadata: Metadata = {
-  title: 'About Us — Event Planner in London and Within 20 Miles',
-  description: 'Meet Angelle Cassell, founder of Emerald Event Planning — a boutique event planner serving London and areas within 20 miles. Learn our story, mission and values.',
+  title,
+  description,
+  keywords: ['event planner London', 'boutique event planner', 'Angelle Cassell', 'Emerald Event Planning founder'],
   alternates: { canonical: '/about' },
+  openGraph: { title, description, url: '/about' },
+  twitter: { title, description },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'About', item: `${SITE_URL}/about` },
+  ],
 };
 
 const values = [
@@ -154,6 +170,11 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
     </>
   );
 }

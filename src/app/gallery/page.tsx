@@ -1,11 +1,27 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import GalleryClient from './GalleryClient';
+import { SITE_URL } from '@/lib/site';
+
+const title = 'Event Gallery — Real Celebrations Across London';
+const description = 'Browse a selection of events planned and coordinated by Emerald Event Planning across London and within 20 miles — from elegant anniversary celebrations to creative birthday parties.';
 
 export const metadata: Metadata = {
-  title: 'Event Gallery — Real Celebrations Across London',
-  description: 'Browse a selection of events planned and coordinated by Emerald Event Planning across London and within 20 miles — from elegant anniversary celebrations to creative birthday parties.',
+  title,
+  description,
+  keywords: ['event planner portfolio London', 'party styling gallery', 'balloon displays London', 'event decor examples'],
   alternates: { canonical: '/gallery' },
+  openGraph: { title, description, url: '/gallery' },
+  twitter: { title, description },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Gallery', item: `${SITE_URL}/gallery` },
+  ],
 };
 
 const photos = [
@@ -57,6 +73,11 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
     </>
   );
 }

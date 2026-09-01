@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
+import { SITE_URL } from '@/lib/site';
 
 const packages = [
   {
@@ -54,10 +55,16 @@ const packages = [
   },
 ];
 
+const title = 'Event Planner Pricing — Packages From £150 | London';
+const description = 'Transparent event planner pricing across London and within 20 miles. From £150 for essential planning support to fully bespoke quotes for larger events — no hidden fees.';
+
 export const metadata: Metadata = {
-  title: 'Event Planner Pricing — London and Within 20 Miles',
-  description: 'Transparent event planner pricing across London and within 20 miles. From £150 for essential planning support to fully bespoke quotes for larger events.',
+  title,
+  description,
+  keywords: ['event planner pricing London', 'party planner cost', 'event planning packages', 'wedding and party planner fees'],
   alternates: { canonical: '/pricing' },
+  openGraph: { title, description, url: '/pricing' },
+  twitter: { title, description },
 };
 
 const faqs = [
@@ -80,6 +87,15 @@ const faqJsonLd = {
       text: a,
     },
   })),
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Pricing', item: `${SITE_URL}/pricing` },
+  ],
 };
 
 export default function PricingPage() {
@@ -238,8 +254,11 @@ export default function PricingPage() {
 
       <script
         type="application/ld+json"
-         
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* CTA */}

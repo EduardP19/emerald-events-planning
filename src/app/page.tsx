@@ -4,10 +4,16 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import heroImage from '../../assets/images/hero.jpg';
 
+const title = 'Emerald Event Planning — Making Occasions Unforgettable';
+const description = 'Boutique event planning for milestone celebrations, anniversaries, baby showers, birthdays, wakes & repasts across London and within 20 miles.';
+
 export const metadata: Metadata = {
-  title: 'Emerald Event Planning — Making Occasions Unforgettable',
-  description: 'Boutique event planning for milestone celebrations, anniversaries, baby showers, birthdays, wakes & repasts across London and within 20 miles.',
+  title,
+  description,
+  keywords: ['event planner London', 'party planner London', 'milestone event planning', 'boutique event planner'],
   alternates: { canonical: '/' },
+  openGraph: { title, description, url: '/' },
+  twitter: { title, description },
 };
 
 const events = [
@@ -26,6 +32,29 @@ const gallery = [
   { src: '/images/balloon-stitch.jpg',      alt: 'Stitch themed birthday balloon arch' },
   { src: '/images/anniversary-glasses.jpg', alt: 'Personalised anniversary glasses' },
   { src: '/images/table-setting.jpg',       alt: 'Elegant table setting with white roses' },
+];
+
+const testimonials = [
+  {
+    quote: 'From our very first call, Angelle understood exactly what we wanted. Every detail on the day was perfect — our guests are still talking about it.',
+    name: 'Sophie R.',
+    event: 'Golden Anniversary Celebration',
+  },
+  {
+    quote: 'Effortless from start to finish. She handled every supplier, every timing, every small worry — all we had to do was enjoy the evening.',
+    name: 'Marcus T.',
+    event: '40th Birthday Party',
+  },
+  {
+    quote: 'We couldn’t have asked for a more thoughtful planner. The styling was beautiful and the coordination on the day was completely seamless.',
+    name: 'Priya K.',
+    event: 'Baby Shower',
+  },
+  {
+    quote: 'Angelle brought calm and elegance to what could have been a very stressful day. Our engagement party looked like something from a magazine.',
+    name: 'Daniel & Freya',
+    event: 'Engagement Party',
+  },
 ];
 
 export default function HomePage() {
@@ -140,6 +169,27 @@ export default function HomePage() {
               <small>With Emerald Bespoke, this drops to £40 per hour.</small>
             </div>
             <Link href="/pricing" className="btn btn-gold">View Pricing</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ TESTIMONIALS ═══════════════════════════════════════ */}
+      <section className={`section ${styles.testimonials}`}>
+        <div className="container text-center">
+          <span className="section-label">Kind Words</span>
+          <h2 className={styles.sectionHeading}>What Our Clients Say</h2>
+          <div className="section-divider"><span>❖</span></div>
+          <div className={styles.testimonialGrid}>
+            {testimonials.map(({ quote, name, event }) => (
+              <figure key={name} className={styles.testimonialCard}>
+                <span className={styles.testimonialMark} aria-hidden="true">&ldquo;</span>
+                <blockquote className={styles.testimonialQuote}>{quote}</blockquote>
+                <figcaption className={styles.testimonialAuthor}>
+                  <span className={styles.testimonialName}>{name}</span>
+                  <span className={styles.testimonialEvent}>{event}</span>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
