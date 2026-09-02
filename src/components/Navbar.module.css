@@ -124,11 +124,11 @@
 
 @media (max-width: 768px) {
   .logo {
-    padding-left: 1.5rem;
+    padding-left: 25px;
   }
 
   .logo img {
-    width: min(68vw, 280px);
+    width: min(68vw, 175px);
     max-height: calc((var(--nav-height) - 18px) * 0.82);
   }
 }
