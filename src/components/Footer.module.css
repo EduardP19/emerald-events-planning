@@ -128,7 +128,10 @@
   .grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; }
 }
 @media (max-width: 600px) {
-  .footer { padding-top: 2.75rem; }
+  .footer {
+    background: linear-gradient(135deg, var(--emerald-dark) 0%, var(--emerald) 60%, var(--emerald-mid) 100%);
+    padding-top: 2.75rem;
+  }
   .grid { grid-template-columns: 1fr; }
   .brand { display: flex; flex-direction: column; align-items: center; text-align: center; }
   .logoRow img {
