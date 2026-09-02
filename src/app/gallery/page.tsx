@@ -25,14 +25,29 @@ const breadcrumbJsonLd = {
 };
 
 const photos = [
-  { src: '/images/venue-blue.jpg', alt: 'Elegant blue-lit event venue', category: 'Venue', span: 'large' },
+  { src: '/images/venue-blue.jpg', alt: 'Elegant blue-lit event venue', category: 'Venue', span: 'large' as const },
   { src: '/images/table-setting.jpg', alt: 'Elegant table setting with white roses for anniversary', category: 'Table Styling' },
   { src: '/images/welcome-sign.jpg', alt: 'Personalised welcome sign on easel for anniversary tea party', category: 'Signage' },
-  { src: '/images/balloon-stitch.jpg', alt: 'Stitch themed birthday balloon arch', category: 'Balloon Displays', span: 'tall' },
+  { src: '/images/balloon-stitch.jpg', alt: 'Stitch themed birthday balloon arch', category: 'Balloon Displays', span: 'tall' as const },
   { src: '/images/venue-bunting.jpg', alt: 'Elegantly decorated venue with personalised bunting', category: 'Venue Styling' },
   { src: '/images/gift-bags.jpg', alt: 'Personalised gift bags and favour table', category: 'Favours' },
   { src: '/images/balloon-mickey.jpg', alt: 'Mickey Mouse outdoor balloon arch display', category: 'Balloon Displays' },
   { src: '/images/anniversary-glasses.jpg', alt: 'Personalised anniversary champagne flutes with floral arrangement', category: 'Details' },
+  { src: '/images/bright-floral-centrepiece.jpg', alt: 'Bright floral centrepiece with colourful flowers', category: 'Floral Styling', span: 'tall' as const },
+  { src: '/images/floral-letter-j.jpg', alt: 'Personalised floral letter J arrangement', category: 'Floral Styling', span: 'tall' as const },
+  { src: '/images/floral-letters-display.jpg', alt: 'Personalised floral letters display', category: 'Floral Styling', span: 'large' as const },
+  { src: '/images/blue-white-floral-letter.jpg', alt: 'Blue and white floral letter arrangement', category: 'Floral Styling' },
+  { src: '/images/blue-white-floral-letter-stand.jpg', alt: 'Blue and white floral letter display on a stand', category: 'Floral Styling', span: 'tall' as const },
+  { src: '/images/white-burgundy-floral-bouquet.jpg', alt: 'White and burgundy floral bouquet with pampas grass', category: 'Floral Styling', span: 'tall' as const },
+  { src: '/images/cream-burgundy-floral-box.jpg', alt: 'Cream and burgundy floral box arrangement', category: 'Floral Styling', span: 'tall' as const },
+  { src: '/images/decorative-paper-fans.jpg', alt: 'Decorative paper fans laid out for event styling', category: 'Details', span: 'large' as const },
+  { src: '/images/blue-white-bridal-bouquet.jpg', alt: 'Blue and white bouquet held by a guest', category: 'Floral Styling' },
+  { src: '/images/blue-white-buttonhole.jpg', alt: 'Blue and white buttonhole on a suit jacket', category: 'Details', span: 'tall' as const },
+  { src: '/images/blue-cream-bouquet-closeup.jpg', alt: 'Blue and cream bouquet close-up with delicate white flowers', category: 'Floral Styling', span: 'tall' as const },
+  { src: '/images/blue-cream-bouquet.jpg', alt: 'Blue and cream bouquet with roses and baby breath', category: 'Floral Styling', span: 'tall' as const },
+  { src: '/images/celebration-cake-floral-table.jpg', alt: 'Celebration cake table with coordinated floral details', category: 'Table Styling', span: 'tall' as const },
+  { src: '/images/fruit-hampers.jpg', alt: 'Wrapped fruit hampers with ribbon details', category: 'Favours', span: 'tall' as const },
+  { src: '/images/fruit-hamper-row.jpg', alt: 'Row of prepared fruit hampers for guests', category: 'Favours', span: 'large' as const },
 ];
 
 export default function GalleryPage() {

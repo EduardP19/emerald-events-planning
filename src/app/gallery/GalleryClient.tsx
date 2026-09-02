@@ -8,6 +8,7 @@ type Photo = {
   src: string;
   alt: string;
   category: string;
+  span?: 'large' | 'tall';
 };
 
 export default function GalleryClient({ photos }: { photos: Photo[] }) {
@@ -36,11 +37,11 @@ export default function GalleryClient({ photos }: { photos: Photo[] }) {
   return (
     <>
       <div className={styles.galleryGrid}>
-        {photos.map(({ src, alt, category }, index) => (
+        {photos.map(({ src, alt, category, span }, index) => (
           <button
             key={src}
             type="button"
-            className={styles.galleryItem}
+            className={`${styles.galleryItem} ${span ? styles[span] : ''}`}
             onClick={() => setActiveIndex(index)}
             aria-label={`Open image: ${alt}`}
           >
