@@ -54,7 +54,7 @@
   font-size: clamp(4.9rem, 8vw, 7rem);
   font-weight: 700;
   line-height: 0.92;
-  color: var(--emerald);
+  color: var(--emerald-dark);
   text-transform: uppercase;
   margin-bottom: 0.95rem;
 }

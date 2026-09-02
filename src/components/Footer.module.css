@@ -137,7 +137,7 @@
   .logoRow img {
     width: 200px;
   }
-  .desc { max-width: 90%; }
+  .desc { max-width: 100%; }
   .contactList li { grid-template-columns: 1fr; gap: 0.2rem; }
   .bottom .container { flex-direction: column; text-align: center; }
   .legal { flex-wrap: wrap; justify-content: center; gap: 0.85rem 1.2rem; }
