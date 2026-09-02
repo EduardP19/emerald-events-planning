@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import styles from './page.module.css';
 import { ENQUIRY_FORM_URL, SITE_URL } from '@/lib/site';
 
-const title = 'Contact Us — Get a Quote From Your London Event Planner';
-const description = 'Get in touch with Emerald Event Planning to book your event, request a quote, or simply have a chat about your ideas. Serving London and areas within 20 miles.';
+const title = 'Contact Us — Get a Quote From Your Event Planner';
+const description = 'Get in touch with Emerald Event Planning to book your event, request a quote, or simply have a chat about your ideas. Serving Haslemere, Surrey, West Sussex and Hampshire.';
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ['contact event planner London', 'event planning quote', 'book event planner', 'party planner enquiry'],
+  keywords: ['contact event planner Surrey', 'event planner West Sussex', 'event planner Hampshire', 'event planning quote', 'book event planner', 'party planner enquiry'],
   alternates: { canonical: '/contact' },
   openGraph: { title, description, url: '/contact' },
   twitter: { title, description },
@@ -63,7 +63,7 @@ export default function ContactPage() {
                       <span>07498853144</span>
                     </div>
                   </a>
-                  <a href="mailto:emeraldeventplanning2026@outlook.com" className={styles.infoItem}>
+                  <a href="mailto:emeraldeventplanning2026@outlook.com" className={`${styles.infoItem} ${styles.emailItem}`}>
                     <span className={styles.infoIcon}>✉️</span>
                     <div>
                       <strong>Email</strong>
@@ -109,8 +109,8 @@ export default function ContactPage() {
 
               <div className={styles.infoCard}>
                 <h3 className={styles.infoTitle}>Areas We Cover</h3>
-                <p className={styles.areasText}>London and within 20 miles</p>
-                <p className={styles.areasSubtext}>Including Essex, Hertfordshire and Kent border towns.</p>
+                <p className={styles.areasText}>Haslemere, Surrey, West Sussex and Hampshire</p>
+                <p className={styles.areasSubtext}>Elegant, personal celebrations planned across these areas.</p>
               </div>
             </div>
           </div>

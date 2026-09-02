@@ -3,13 +3,13 @@ import Link from 'next/link';
 import GalleryClient from './GalleryClient';
 import { SITE_URL } from '@/lib/site';
 
-const title = 'Event Gallery — Real Celebrations Across London';
-const description = 'Browse a selection of events planned and coordinated by Emerald Event Planning across London and within 20 miles — from elegant anniversary celebrations to creative birthday parties.';
+const title = 'Event Gallery — Real Celebrations Across Surrey, West Sussex and Hampshire';
+const description = 'Browse a selection of events planned and coordinated by Emerald Event Planning across Surrey, West Sussex and Hampshire — from elegant anniversary celebrations to creative birthday parties.';
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ['event planner portfolio London', 'party styling gallery', 'balloon displays London', 'event decor examples'],
+  keywords: ['event planner portfolio Surrey', 'event planner West Sussex', 'event planner Hampshire', 'party styling gallery', 'event decor examples'],
   alternates: { canonical: '/gallery' },
   openGraph: { title, description, url: '/gallery' },
   twitter: { title, description },
@@ -49,8 +49,8 @@ export default function GalleryPage() {
       <section className="section">
         <div className="container">
           <p style={{ maxWidth: 720, margin: '0 auto 2.5rem', textAlign: 'center' }}>
-            From intimate anniversary teas to milestone birthdays across London, every event below was
-            planned and styled by Emerald Event Planning for clients in London and within 20 miles.
+            From intimate anniversary teas to milestone birthdays across Surrey, West Sussex and Hampshire,
+            every event below was planned and styled by Emerald Event Planning.
             Explore venue styling, balloon displays, table settings and personal touches from real
             celebrations we&apos;ve brought to life.
           </p>

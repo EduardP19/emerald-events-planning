@@ -2,7 +2,7 @@
   background:
     linear-gradient(135deg, #04160c 0%, #082713 44%, #0d351a 100%);
   color: rgba(255,255,255,0.75);
-  padding-top: 5rem;
+  padding-top: 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -42,7 +42,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.85fr) minmax(0, 1fr) minmax(0, 1.25fr);
   gap: 3.5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
   border-bottom: 1px solid rgba(232,201,122,0.22);
 }
 
@@ -50,15 +50,16 @@
 .logoRow {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.75rem 1rem;
+  background: var(--white);
+  border-radius: 6px;
   margin-bottom: 1.5rem;
 }
 .logoRow img {
-  width: 140px;
+  width: 340px;
   height: auto;
-  padding: 20px;
-  background: var(--emerald-light);
-  border: 1px solid rgba(232,201,122,0.26);
-  border-radius: 18px;
   overflow: hidden;
   filter: drop-shadow(0 12px 24px rgba(0,0,0,0.22));
 }
@@ -103,7 +104,8 @@
   text-transform: uppercase;
 }
 .contactList li a,
-.contactList li span { color: rgba(255,255,255,0.68); transition: color 0.2s; word-break: break-word; }
+.contactList li span { color: rgba(255,255,255,0.68); transition: color 0.2s; }
+.contactList li a { white-space: nowrap; font-size: clamp(0.72rem, 0.85vw, 0.88rem); }
 .contactList li a:hover { color: var(--gold-light); }
 
 .bottom {
@@ -126,11 +128,11 @@
   .grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; }
 }
 @media (max-width: 600px) {
-  .footer { padding-top: 3.5rem; }
+  .footer { padding-top: 2.75rem; }
   .grid { grid-template-columns: 1fr; }
   .brand { display: flex; flex-direction: column; align-items: center; text-align: center; }
   .logoRow img {
-    width: 130px;
+    width: 310px;
   }
   .desc { max-width: 100%; }
   .contactList li { grid-template-columns: 1fr; gap: 0.2rem; }

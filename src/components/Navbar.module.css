@@ -14,19 +14,24 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  max-width: 1440px;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  padding-left: 125px;
+  padding-right: 1rem;
+  background: var(--white);
+  border-radius: 6px;
   text-decoration: none;
   flex-shrink: 0;
-  height: 100%;
+  height: calc(100% - 2rem);
 }
 .logo img {
-  width: 168px;
+  width: auto;
   height: auto;
-  max-height: 96px;
+  max-height: calc((var(--nav-height) - 18px) * 0.82);
   object-fit: contain;
 }
 
@@ -118,8 +123,12 @@
 }
 
 @media (max-width: 768px) {
+  .logo {
+    padding-left: 1.5rem;
+  }
+
   .logo img {
-    width: 126px;
-    max-height: 78px;
+    width: min(68vw, 280px);
+    max-height: calc((var(--nav-height) - 18px) * 0.82);
   }
 }

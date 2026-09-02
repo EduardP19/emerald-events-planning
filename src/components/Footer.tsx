@@ -11,9 +11,9 @@ export default function Footer() {
       <div className={`container ${styles.grid} ${styles.contentWrapper}`}>
         <div className={styles.brand}>
           <div className={styles.logoRow}>
-            <Image src="/logo_nobg.png" alt="Emerald Event Planning" width={170} height={187} />
+            <Image src="/emerald-events_logo_v2_navbar_cropped.png" alt="Emerald Event Planning" width={1436} height={526} quality={100} unoptimized />
           </div>
-          <p className={styles.desc}>Boutique event planning for elegant, personal celebrations across London.</p>
+          <p className={styles.desc}>Boutique event planning for elegant, personal celebrations across Surrey, West Sussex and Hampshire.</p>
         </div>
 
         <div className={styles.col}>

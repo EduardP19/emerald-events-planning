@@ -31,7 +31,7 @@ export default function Navbar() {
     <header className={`${styles.navbar} ${transparent ? styles.transparent : styles.solid} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo}>
-          <Image src="/logo.png" alt="Emerald Event Planning" width={182} height={200} priority />
+          <Image src="/emerald-events_logo_v2_navbar_cropped.png" alt="Emerald Event Planning" width={1436} height={526} priority quality={100} unoptimized />
         </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`} aria-label="Main navigation">

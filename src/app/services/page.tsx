@@ -3,13 +3,13 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import { SITE_URL } from '@/lib/site';
 
-const title = 'Event Planning Services — London and Within 20 Miles';
-const description = 'Full event planning services from Emerald Event Planning: venue sourcing, supplier coordination, styling, budget management and on-the-day coordination. Serving London and areas within 20 miles.';
+const title = 'Event Planning Services — Surrey, West Sussex and Hampshire';
+const description = 'Full event planning services from Emerald Event Planning: venue sourcing, supplier coordination, styling, budget management and on-the-day coordination. Serving Surrey, West Sussex and Hampshire.';
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ['event planning services London', 'venue sourcing', 'supplier coordination', 'event styling', 'on-the-day coordination', 'party planner London'],
+  keywords: ['event planning services Surrey', 'event planner West Sussex', 'event planner Hampshire', 'venue sourcing', 'supplier coordination', 'event styling', 'on-the-day coordination'],
   alternates: { canonical: '/services' },
   openGraph: { title, description, url: '/services' },
   twitter: { title, description },
@@ -139,11 +139,11 @@ const packages = [
   {
     icon: '💎',
     name: 'Emerald Bespoke',
-    subtitle: 'Tailored for larger events',
-    price: 'POA',
+    subtitle: 'Tailored events, fully customised to you',
+    price: 'Tailored Quote',
     note: 'Quote agreed to your needs',
     includes: [
-      'Fully custom service package',
+      'Tailored events, fully customised to you',
       'Large-scale event logistics',
       'Corporate & community events',
       'Risk assessment included',
@@ -157,9 +157,9 @@ const packages = [
 // /pricing (the canonical source for pricing FAQs) to avoid emitting duplicate FAQPage JSON-LD.
 const pricingFaqs = [
   { q: 'Do I need to pay a deposit?', a: 'Yes. A non-refundable booking deposit is required to confirm your date. The amount varies by package and is confirmed in your written quote.' },
-  { q: 'What areas do you cover?', a: 'We serve London and areas within 20 miles, including parts of Essex, Hertfordshire and Kent. Events outside these areas can be discussed — additional travel expenses may apply.' },
-  { q: 'What is included in "expenses"?', a: 'Expenses are out-of-pocket costs incurred on your behalf — for example, travel to venues, printing costs, or sourcing specific materials. All expenses are pre-agreed with you before any spend.' },
-  { q: 'Can I add On-the-Day coordination?', a: 'Yes. On-the-Day can be added after your main package is selected. It is £70 per hour with a 2-hour minimum, and drops to £40 per hour with Emerald Bespoke packages.' },
+  { q: 'What areas do you cover?', a: 'We serve Surrey, West Sussex and Hampshire. Events outside these areas can be discussed — additional travel expenses may apply.' },
+  { q: 'What is included in "expenses"?', a: 'Expenses are out-of-pocket costs incurred on your behalf — for example, travel to venues, printing costs, decorations, or sourcing specific materials. All expenses are pre-agreed with you before any spend.' },
+  { q: 'Can I add On-the-Day coordination?', a: 'Yes. When booked on its own, On-the-Day coordination is £70 per hour with a 2-hour minimum. When added to Emerald Complete or Emerald Bespoke, a reduced rate may apply depending on the size of your event.' },
   { q: 'What if I need to cancel?', a: 'Cancellation terms are set out in your booking agreement. Generally, if you cancel with 30+ days notice, any payments beyond the deposit may be refunded. See our Terms & Conditions for full details.' },
   { q: 'Do you work with a specific set of suppliers?', a: 'We work with a vetted network of trusted local suppliers, but we are happy to work with your preferred vendors too. Supplier selection is always discussed and agreed with you.' },
 ];
@@ -172,7 +172,7 @@ const servicesJsonLd = {
     '@type': 'LocalBusiness',
     name: 'Emerald Event Planning',
   },
-  areaServed: ['London', 'Essex', 'Hertfordshire', 'Kent'],
+  areaServed: ['Surrey', 'West Sussex', 'Hampshire'],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Event Planning Packages',
@@ -306,7 +306,7 @@ export default function ServicesPage() {
             </ul>
             <div className={styles.addonRate}>
               <span>£70 p/h</span>
-              <small>Minimum 2 hours. With Emerald Bespoke, this drops to £40 per hour.</small>
+              <small>Minimum 2 hours. Reduced rates apply with Emerald Complete and Emerald Bespoke packages depending on event size.</small>
             </div>
             <Link href="/contact" className="btn btn-gold">Add Coordination</Link>
           </aside>
@@ -314,7 +314,7 @@ export default function ServicesPage() {
           {/* Expenses note */}
           <div className={styles.expenseNote}>
             <span>ℹ️</span>
-            <p><strong>About expenses:</strong> Where quoted, expenses include reasonable out-of-pocket costs such as travel, printing, and materials sourced on your behalf. All expenses are pre-agreed with you in writing before any spend is incurred.</p>
+            <p><strong>About expenses:</strong> Where quoted, expenses include reasonable out-of-pocket costs such as travel, printing, decorations, and materials sourced on your behalf. All expenses are pre-agreed with you in writing before any spend is incurred.</p>
           </div>
         </div>
       </section>

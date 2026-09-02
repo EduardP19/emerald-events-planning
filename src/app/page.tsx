@@ -5,12 +5,12 @@ import styles from './page.module.css';
 import heroImage from '../../assets/images/hero.jpg';
 
 const title = 'Emerald Event Planning — Making Occasions Unforgettable';
-const description = 'Boutique event planning for milestone celebrations, anniversaries, baby showers, birthdays, wakes & repasts across London and within 20 miles.';
+const description = 'Boutique event planning for elegant, personal celebrations across Surrey, West Sussex and Hampshire.';
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ['event planner London', 'party planner London', 'milestone event planning', 'boutique event planner'],
+  keywords: ['event planner Surrey', 'event planner West Sussex', 'event planner Hampshire', 'milestone event planning', 'boutique event planner'],
   alternates: { canonical: '/' },
   openGraph: { title, description, url: '/' },
   twitter: { title, description },
@@ -72,15 +72,15 @@ export default function HomePage() {
         <div className={styles.heroVeil} />
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroContent}>
-            <span className={styles.heroLabel}>Making Occasions Unforgettable.</span>
             <h1 className={styles.heroTitle}>
               Emerald<br />Event Planning
             </h1>
+            <span className={styles.heroLabel}>Making Occasions Unforgettable</span>
             <p className={styles.heroSub}>
-              We plan with passion, design with elegance and deliver memories that last a lifetime.
+              We plan with passion, design with elegance and deliver memories that last a lifetime
             </p>
             <Link href="/contact" className={`btn btn-primary ${styles.heroCta}`}>
-              Plan Your Perfect Event
+              Boutique event planning
             </Link>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function HomePage() {
           <div className={styles.aboutText}>
             <span className="section-label">About Emerald Event Planning</span>
             <h2 className={styles.aboutTitle}>
-              Creating Moments,<br />Crafting Memories.
+              Creating Moments,<br />Crafting Memories
             </h2>
             <p>
               At Emerald Event Planning, we believe every occasion deserves to be extraordinary.
@@ -126,8 +126,8 @@ export default function HomePage() {
               celebrate with confidence and joy.
             </p>
             <p>
-              Founded by Angelle Cassell, Emerald was born from a love of bringing people together
-              and making every event feel beautiful, calm and effortlessly special.
+              Founded by Angelle Cassell, Emerald Event Planning was born from a love of bringing
+              people together and making every event feel beautiful, calm and effortlessly special.
             </p>
             <Link href="/about" className={`btn btn-primary ${styles.aboutCta}`}>Learn More About Us</Link>
           </div>
@@ -144,7 +144,7 @@ export default function HomePage() {
             {[
               { name: 'Emerald Essentials', price: '£150', desc: 'Basic planning support: consultation, venue suggestions, supplier recommendations and your personalised event checklist.', icon: '📋' },
               { name: 'Emerald Complete', price: '£250 – £2,500', desc: 'Full end-to-end event management: venue sourcing, supplier negotiations, budget management and full timeline planning.', icon: '✨', featured: true },
-              { name: 'Emerald Bespoke', price: 'Tailored Quote', desc: 'For larger or more complex events with unique requirements. Everything crafted to your vision.', icon: '💎' },
+              { name: 'Emerald Bespoke', price: 'Tailored Quote', desc: 'Tailored events, fully customised to you.', icon: '💎' },
             ].map(({ name, price, desc, icon, featured }) => (
               <div key={name} className={`${styles.packageCard} ${featured ? styles.featured : ''}`}>
                 <div className={styles.homeBadgeSlot}>
@@ -154,7 +154,7 @@ export default function HomePage() {
                 <h3 className={styles.pkgName}>{name}</h3>
                 <div className={styles.pkgPrice}>{price}</div>
                 <p className={styles.pkgDesc}>{desc}</p>
-                <Link href="/services" className={featured ? 'btn btn-gold' : 'btn btn-primary'}>Find Out More</Link>
+                <Link href="/contact" className={featured ? 'btn btn-gold' : 'btn btn-primary'}>Find Out More</Link>
               </div>
             ))}
           </div>
@@ -162,13 +162,13 @@ export default function HomePage() {
             <div>
               <span className={styles.homeAddonLabel}>Add-on</span>
               <h3>On-the-Day Coordination</h3>
-              <p>Event setup, supplier management, guest coordination and troubleshooting, added after your main package is chosen.</p>
+              <p>Event setup, supplier management, guest coordination and troubleshooting, added after your main package is chosen. Reduced rates apply with Emerald Complete and Emerald Bespoke packages depending on event size.</p>
             </div>
             <div className={styles.homeAddonPrice}>
               <span>£70 p/h</span>
-              <small>With Emerald Bespoke, this drops to £40 per hour.</small>
+              <small>Reduced rates apply with Emerald Complete and Emerald Bespoke packages depending on event size.</small>
             </div>
-            <Link href="/pricing" className="btn btn-gold">View Pricing</Link>
+            <Link href="/contact" className="btn btn-gold">Add Coordination</Link>
           </div>
         </div>
       </section>
@@ -215,7 +215,7 @@ export default function HomePage() {
         <div className={`container ${styles.ctaInner}`}>
           <div className={styles.ctaCopy}>
             <span className={styles.ctaLabel}>Begin Your Celebration</span>
-            <h2 className={styles.ctaTitle}>Let&apos;s plan your perfect event</h2>
+            <h2 className={styles.ctaTitle}>Boutique event planning for elegant, personal celebrations across Surrey, West Sussex and Hampshire</h2>
             <p>
               Tell us what you&apos;re imagining and we&apos;ll shape the details into a calm,
               beautifully organised plan.

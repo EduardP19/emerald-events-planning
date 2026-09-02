@@ -40,7 +40,12 @@
 .infoIcon  { font-size: 1.25rem; flex-shrink: 0; margin-top: 2px; }
 .infoItem div { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
 .infoItem strong { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; }
-.infoItem span   { font-size: 0.9rem; color: var(--grey); line-height: 1.4; overflow-wrap: anywhere; }
+.infoItem span   { font-size: 0.9rem; color: var(--grey); line-height: 1.4; }
+.infoItem a span,
+.infoItem div span { white-space: nowrap; font-size: clamp(0.72rem, 1.2vw, 0.9rem); }
+.emailItem div { flex-direction: row; align-items: baseline; gap: 0.75rem; }
+.emailItem strong { flex-shrink: 0; }
+.emailItem div span { font-size: clamp(0.64rem, 0.95vw, 0.82rem); }
 
 .steps { display: flex; flex-direction: column; gap: 1rem; list-style: none; }
 .steps li { display: flex; gap: 0.9rem; align-items: flex-start; }

@@ -4,13 +4,13 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import { SITE_URL } from '@/lib/site';
 
-const title = 'About Us — Meet Your London Event Planner';
-const description = 'Meet Angelle Cassell, founder of Emerald Event Planning — a boutique event planner serving London and areas within 20 miles. Learn our story, mission and values.';
+const title = 'About Us, Meet Your Event Planner';
+const description = 'Meet Angelle Cassell, founder of Emerald Event Planning, a boutique event planner serving Haslemere, Surrey, West Sussex and Hampshire. Learn our story, mission and values.';
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ['event planner London', 'boutique event planner', 'Angelle Cassell', 'Emerald Event Planning founder'],
+  keywords: ['event planner Surrey', 'event planner West Sussex', 'event planner Hampshire', 'boutique event planner', 'Angelle Cassell', 'Emerald Event Planning founder'],
   alternates: { canonical: '/about' },
   openGraph: { title, description, url: '/about' },
   twitter: { title, description },
@@ -29,7 +29,7 @@ const values = [
   { icon: '⭐', title: 'Professionalism', desc: 'Every client, every event, every detail is handled with the highest standards of care and expertise.' },
   { icon: '🤝', title: 'Reliability', desc: 'We deliver on our promises. When you book with us, you can relax knowing every detail is in safe hands.' },
   { icon: '💛', title: 'Customer Focus', desc: 'Your vision is our priority. We listen carefully and tailor every element to reflect who you are.' },
-  { icon: '✨', title: 'Creativity', desc: 'We bring fresh, thoughtful ideas to every event — always designing something that feels personal and special.' },
+  { icon: '✨', title: 'Creativity', desc: 'We bring fresh, thoughtful ideas to every event, always designing something that feels personal and special.' },
 ];
 
 export default function AboutPage() {
@@ -47,14 +47,14 @@ export default function AboutPage() {
         <div className="container">
           <div className={styles.founderGrid}>
             <div className={styles.founderPanel}>
-              <Image src="/logo_nobg.png" alt="Emerald Event Planning" width={240} height={264} />
+              <Image src="/logo.png" alt="Emerald Event Planning" width={900} height={989} quality={100} unoptimized />
             </div>
             <div className={styles.founderText}>
               <span className="section-label">Meet the Founder</span>
-              <h2>Hello, I&apos;m Angelle.</h2>
+              <h2>Hello, I&apos;m Angelle</h2>
               <p>
                 I founded Emerald Event Planning because I believe every occasion deserves to feel beautiful, calm
-                and effortlessly put together — and I love making that happen for people.
+                and effortlessly put together, and I love making that happen for people.
               </p>
               <p>
                 With a sharp eye for detail and a warm, organised approach, I work closely with every client to
@@ -62,12 +62,12 @@ export default function AboutPage() {
                 or a milestone celebration for hundreds, my aim is simple: to make your event extraordinary.
               </p>
               <p>
-                I started Emerald because I love the process — from that first conversation about ideas to seeing
-                the room come together on the day. There&apos;s nothing quite like watching someone walk into their
+                I started Emerald Event Planning because I enjoy the process of making memorable events, from that first
+                conversation about ideas to seeing the room come together on the day. There&apos;s nothing quite like watching someone walk into their
                 event and seeing their face light up.
               </p>
               <p>
-                I also work with a trusted network of caterers, florists, photographers, and entertainers built
+                I work with a trusted network of caterers, florists, photographers, and entertainers built
                 through years of collaboration. Every supplier I recommend has been personally vetted and is
                 someone I&apos;d trust at my own event.
               </p>
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <h2 className={styles.missionTitle}>Our Mission</h2>
           <div className="section-divider"><span>✦</span></div>
           <blockquote className={styles.missionQuote}>
-            &ldquo;To create memorable, stress-free events that bring people together —
+            &ldquo;To create memorable, stress-free events that bring people together,
             while delivering exceptional attention to detail and outstanding personal care.&rdquo;
           </blockquote>
         </div>
@@ -119,15 +119,15 @@ export default function AboutPage() {
             <div>
               <span className="section-label">Where We Work</span>
               <h2>Areas We Cover</h2>
-              <p>Based in Walthamstow (E17), Emerald Event Planning proudly serves clients across London and within 20 miles, including:</p>
+              <p>Emerald Event Planning proudly serves clients across Haslemere, Surrey, West Sussex and Hampshire, including:</p>
               <ul className={styles.areaList}>
-                {['All of London (East, South, North & Central)', 'Essex — Romford, Ilford & Brentwood', 'Hertfordshire — Watford & St Albans', 'Kent — Dartford & Bromley'].map(a => (
+                {['Haslemere', 'Surrey', 'West Sussex', 'Hampshire'].map(a => (
                   <li key={a}>
                     <span className={styles.areaCheck}>📍</span> {a}
                   </li>
                 ))}
               </ul>
-              <p style={{ marginTop: '1rem', fontSize: '0.9rem' }}>Events outside these areas can be accommodated — please get in touch to discuss travel arrangements.</p>
+              <p style={{ marginTop: '1rem', fontSize: '0.9rem' }}>Events outside these areas can be accommodated, please get in touch to discuss travel arrangements.</p>
             </div>
             <div className={styles.addressCard}>
               <h4>Our Details</h4>
@@ -143,13 +143,6 @@ export default function AboutPage() {
                 <div>
                   <strong>Email</strong>
                   <a href="mailto:emeraldeventplanning2026@outlook.com">emeraldeventplanning2026@outlook.com</a>
-                </div>
-              </div>
-              <div className={styles.addressItem}>
-                <span>⚖️</span>
-                <div>
-                  <strong>Business Structure</strong>
-                  <p>Sole Trader, registered in England</p>
                 </div>
               </div>
             </div>

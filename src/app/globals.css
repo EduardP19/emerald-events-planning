@@ -5,8 +5,9 @@
   --emerald-dark: #0F3D1B;
   --emerald-mid: #2D7A43;
   --emerald-light: #EAF4EC;
-  --gold: #C9A84C;
-  --gold-light: #E8C97A;
+  --gold: #D8A62A;
+  --gold-light: #F2C75B;
+  --gold-dark: #9B7416;
   --cream: #FAF8F3;
   --cream-dark: #F0EBE0;
   --charcoal: #1C1C1C;
@@ -21,7 +22,7 @@
   --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
   --shadow-lg: 0 12px 48px rgba(0,0,0,0.18);
   --max-width: 1200px;
-  --nav-height: 108px;
+  --nav-height: 128px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -74,7 +75,7 @@ p  { color: var(--grey); font-size: 1rem; line-height: 1.75; }
 
 .page-content { padding-top: var(--nav-height); }
 
-.page-hero { background: linear-gradient(135deg, var(--emerald-dark) 0%, var(--emerald) 60%, var(--emerald-mid) 100%); padding: 6rem 0 4rem; text-align: center; position: relative; overflow: hidden; }
+.page-hero { background: linear-gradient(135deg, var(--emerald-dark) 0%, var(--emerald) 60%, var(--emerald-mid) 100%); padding: 3.75rem 0 2.75rem; text-align: center; position: relative; overflow: hidden; }
 .page-hero h1 { color: var(--white); font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1rem; position: relative; }
 .page-hero p  { color: rgba(255,255,255,0.78); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
 
@@ -93,10 +94,10 @@ p  { color: var(--grey); font-size: 1rem; line-height: 1.75; }
 .legal-content a  { color: var(--emerald); text-decoration: underline; }
 
 @media (max-width: 768px) {
-  :root { --nav-height: 88px; }
+  :root { --nav-height: 104px; }
   .section { padding: 3.5rem 0; }
   .container { padding: 0 1.25rem; }
-  .page-hero { padding: 4.75rem 0 3rem; }
+  .page-hero { padding: 3.25rem 0 2.25rem; }
 }
 
 @media (max-width: 480px) {

@@ -38,6 +38,7 @@ export default function PrivacyPage() {
         <ul>
           <li>Name, email address, phone number</li>
           <li>Event details (type, date, number of guests, venue preferences)</li>
+          <li>Dietary and special requirements, including disability status, where relevant to planning your event</li>
           <li>Budget information shared during consultation</li>
           <li>Messages, correspondence and notes from consultations</li>
           <li>Payment details (processed via secure third-party payment providers — we do not store card details)</li>

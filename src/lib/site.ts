@@ -13,13 +13,12 @@ export const BUSINESS = {
   postalCode: 'E17',
   addressRegion: 'London',
   addressCountry: 'GB',
-  // Approx. coordinates for E17, London — used as the centre point for the service-area radius.
-  latitude: 51.5895,
-  longitude: -0.0155,
-  serviceRadiusMiles: 20,
-  // Real places within ~20 miles of E17 — London plus the near edges of Essex, Herts & Kent.
-  areasServed: ['London', 'Essex', 'Hertfordshire', 'Kent'],
-  areasServedShort: 'London and within 20 miles',
+  // Approx. coordinates for Surrey — used only for general regional business context.
+  latitude: 51.3148,
+  longitude: -0.5600,
+  // Service areas for regional event planning.
+  areasServed: ['Surrey', 'West Sussex', 'Hampshire'],
+  areasServedShort: 'Surrey, West Sussex and Hampshire',
   priceRange: '££',
 };
 
