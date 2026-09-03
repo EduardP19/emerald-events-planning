@@ -34,7 +34,7 @@ const photos = [
   { src: '/images/balloon-mickey.jpg', alt: 'Mickey Mouse outdoor balloon arch display', category: 'Balloon Displays' },
   { src: '/images/anniversary-glasses.jpg', alt: 'Personalised anniversary champagne flutes with floral arrangement', category: 'Details' },
   { src: '/images/bright-floral-centrepiece.jpg', alt: 'Bright floral centrepiece with colourful flowers', category: 'Floral Styling', span: 'tall' as const },
-  { src: '/images/floral-letter-j.jpg', alt: 'Personalised floral letter J arrangement', category: 'Floral Styling', span: 'tall' as const },
+  { src: '/images/floral-letter-j.jpg', alt: 'Personalised floral letter D arrangement', category: 'Floral Styling', span: 'tall' as const },
   { src: '/images/floral-letters-display.jpg', alt: 'Personalised floral letters display', category: 'Floral Styling', span: 'large' as const },
   { src: '/images/blue-white-floral-letter.jpg', alt: 'Blue and white floral letter arrangement', category: 'Floral Styling' },
   { src: '/images/blue-white-floral-letter-stand.jpg', alt: 'Blue and white floral letter display on a stand', category: 'Floral Styling', span: 'tall' as const },
